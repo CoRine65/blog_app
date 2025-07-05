@@ -30,3 +30,7 @@ production:
 cable:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
+
+queue:
+  <<: *default
+  url: <%= ENV["QUEUE_DATABASE_URL"] || ENV["DATABASE_URL"] %>
